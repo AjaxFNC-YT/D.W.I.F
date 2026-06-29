@@ -1,0 +1,13 @@
+{
+  "name": "widget-image-resizer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small CLI for adding a transparent top strip and rounded top-right corner to widget images.",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

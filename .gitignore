@@ -1,0 +1,6 @@
+node_modules/
+*-resized.png
+output/*
+!output/.gitkeep
+input/*
+!input/.gitkeep
