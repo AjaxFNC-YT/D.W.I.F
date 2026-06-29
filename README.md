@@ -15,6 +15,10 @@
 </p>
 
 <p align="center">
+  <img src="./assets/before-after.webp" alt="Before and after preview of D.W.I.F. fixing a Discord widget image">
+</p>
+
+<p align="center">
   <a href="#install">Install</a> |
   <a href="#quick-use">Quick Use</a> |
   <a href="#folders">Folders</a> |
