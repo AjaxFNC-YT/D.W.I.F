@@ -9,9 +9,9 @@ const REFERENCE_SIZE = 512;
 const AUTO_TOP_STRIP_BASE = 17;
 const AUTO_RADIUS_BASE = 36;
 const AUTO_TOP_STRIP_EXPONENT =
-  Math.log(33 / 17) / Math.log(Math.sqrt(1844 * 853) / REFERENCE_SIZE);
+  Math.log(54 / 17) / Math.log(Math.sqrt(1844 * 853) / REFERENCE_SIZE);
 const AUTO_RADIUS_EXPONENT =
-  Math.log(93 / 36) / Math.log(Math.sqrt(1844 * 853) / REFERENCE_SIZE);
+  Math.log(172 / 36) / Math.log(Math.sqrt(1844 * 853) / REFERENCE_SIZE);
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const INPUT_DIR = path.join(SCRIPT_DIR, "input");
 const OUTPUT_DIR = path.join(SCRIPT_DIR, "output");
@@ -31,7 +31,7 @@ Notes:
   - Relative input names are loaded from the local input folder.
   - Full absolute input paths are also supported.
   - Output always goes into the local output folder.
-  - The auto sizing is calibrated from 512x512 -> 17/36 and 1844x853 -> 33/93.
+  - The auto sizing is calibrated from 512x512 -> 17/36 and 1844x853 -> 54/172.
 `);
 }
 

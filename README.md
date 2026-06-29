@@ -117,5 +117,5 @@ node index.mjs --help
 - The script keeps the original image size and aspect ratio.
 - Auto sizing is based on these reference matches:
   - `512x512` -> `17 / 36`
-  - `1844x853` -> `33 / 93`
+  - `1844x853` -> `54 / 172`
 - You may see a warning when the source image is not `512x512`, since that is the original widget reference size.
