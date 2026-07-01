@@ -1,0 +1,20 @@
+[package]
+name = "dwif"
+version = "1.0.0"
+description = "D.W.I.F. desktop UI"
+authors = ["Codex"]
+edition = "2021"
+
+[lib]
+name = "dwif_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+base64 = "0.22"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"

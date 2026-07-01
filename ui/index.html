@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D.W.I.F.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="titlebar">
+        <span class="titlebar-brand" data-tauri-drag-region>D.W.I.F.</span>
+        <span id="titlebarStatus" class="titlebar-status" data-tauri-drag-region>Waiting for an image.</span>
+        <div class="titlebar-controls">
+          <button class="titlebar-btn" id="minimizeBtn" aria-label="Minimize">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="titlebar-btn" id="maximizeBtn" aria-label="Maximize">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2" y="2" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
+          </button>
+          <button class="titlebar-btn titlebar-close" id="closeBtn" aria-label="Close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="preview-wrap" aria-label="Image preview">
+          <div id="previewEmpty" class="preview-empty">Drop or select an image</div>
+          <div id="previewLoading" class="preview-loading" hidden>
+            <div class="spinner" aria-hidden="true"></div>
+            <span id="previewLoadingText">Loading preview...</span>
+            <div id="progressWrap" class="progress-wrap" hidden>
+              <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+              </div>
+              <span id="progressLabel" class="progress-label">0%</span>
+            </div>
+          </div>
+          <img id="previewImage" class="preview-image" alt="" hidden />
+          <div id="previewMeta" class="preview-meta"></div>
+        </section>
+
+        <div class="controls">
+          <div class="toolbar">
+            <div class="toolbar-item toolbar-item-image">
+              <label for="inputPath">Image</label>
+              <div class="row">
+                <input id="inputPath" type="text" readonly placeholder="Choose a PNG, JPG, WEBP, or GIF" />
+                <button id="browseButton" type="button">Browse</button>
+              </div>
+            </div>
+
+            <div class="toolbar-item toolbar-item-output">
+              <label for="outputName">Output name</label>
+              <input id="outputName" type="text" placeholder="image-resized.png" />
+            </div>
+
+            <div class="toolbar-item toolbar-item-number">
+              <label for="topStrip">Top strip</label>
+              <input id="topStrip" type="number" min="0" placeholder="Auto" />
+            </div>
+
+            <div class="toolbar-item toolbar-item-number">
+              <label for="radius">Radius</label>
+              <input id="radius" type="number" min="0" placeholder="Auto" />
+            </div>
+
+            <div class="control-actions">
+              <button id="downloadButton" type="button" disabled>Download</button>
+              <button id="processButton" class="primary" type="button">Generate</button>
+            </div>
+          </div>
+
+          <div id="status" class="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </main>
+
+    <input id="localFileInput" type="file" accept=".png,.jpg,.jpeg,.webp,.gif" hidden />
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
